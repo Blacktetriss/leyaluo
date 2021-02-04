@@ -118,15 +118,18 @@
         body {
             background-color: skyblue;
             font-family: 'Roboto Condensed', monospace;
+            overflow: visible;
         }
 
         h1 {
-            font-weight: bold;
-            font-size: 2.2em;
+            font-weight: normal;
+            font-size: 2em;
             line-height: 1.2;
             text-transform: uppercase;
             text-align: center;
-            width: 300px;
+        }
+        
+        div {
             margin: auto;
         }
 
@@ -135,18 +138,13 @@
             background: rgb(194, 248, 241);
             padding: 15px 40px 40px;
             border: 2px solid rgb(194, 248, 241);
-            margin: 50px auto 0;
-            border-radius: 5px;
+            margin: 50px auto 10px;
+            border-radius: 20px;
         }
 
         label {
             display: block;
             margin-bottom: 5px
-        }
-
-        label i {
-            color: #999;
-            font-size: 80%;
         }
 
         input,
@@ -161,52 +159,39 @@
             border-radius: 2px;
         }
 
-        input:required:valid {
-            background-color: rgb(194, 248, 241);
-        }
-
-
         .row {
             padding-bottom: 10px;
             align-content: center;
         }
 
         .form-inline {
-            border: 1px solid rgb(194, 248, 241);
-            padding: 8px 10px 4px;
-            border-radius: 2px;
+            padding: 5px 10px 20px;
         }
 
         .form-inline label,
         .form-inline input {
             display: inline-block;
             width: auto;
-            padding-right: 15px;
+            padding: inherit;
         }
-
-        button,
-        input [type="submit"] {
-            font-size: 110%;
-            font-weight: 100;
-            background: rgb(218, 23, 143);
-            border-color: rgb(218, 23, 143);
-            box-shadow: 0 3px 0 rgb(218, 23, 143);
-            color: #fff;
-            margin-top: 10px;
-            cursor: pointer;
+        
+        .fuck {
+            width: 375px;
+            text-align: center;
         }
+        
     </style>
 </head>
 
 <body>
-    <h1>Запис на безкоштовний пробний урок</h1>
-
-    <form class="sample-form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" target="_top">
+    <div class="fuck"><h1>Запис на пробний урок</h1></div>
+    
+    <form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" target="_top">
 
         <div class="row">
             <label>Ім'я</label>
             <input type="text" name="name" placeholder="Adam Smith" title="example: Adam Smith" 
-            pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})"></div>
+                   pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})"></div>
 
         <div class="row">
             <label>Email</label>
@@ -215,20 +200,21 @@
 
         <div class="row">
             <label>Телефон</label>
-            <input type="text" name="tel" placeholder=" +380637776655" pattern="\+380\d{3}\d{2}\d{2}\d{2}" 
+            <input type="text" name="tel" placeholder="+380637776655" pattern="\+380\d{3}\d{2}\d{2}\d{2}" 
                    title="example: +380637776655"></div>
 
-        <div class="row">
-            <label>на який месенджер</label>
+            <h1>на який месенджер</h1>
             <div class="form-inline">
-                <label><input type="radio" name="messenger"> Viber</label>
-                <label><input type="radio" name="messenger"> Telegram</label>
-                <label><input type="radio" name="messenger">SMS</label></div>
-        </div>
+                <input type="radio" id="viber" name="messenger" value="viber">
+                <label for="viber">Viber</label>
+                <input type="radio" id="telegram" name="messenger" value="telegram" checked>
+                <label for="telegram">Telegram</label>
+                <input type="radio" id="sms" name="messenger" value="sms">
+                <label for="sms">SMS</label>
+            </div>
 
-
-        <div class="row">
-            <input type="submit" value="Submit">
+<div class="row">
+            <input style="background-color: coral" type="submit" value="Submit">
         </div>
     </form>
 </body></html>
