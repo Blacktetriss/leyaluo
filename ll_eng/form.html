@@ -128,9 +128,10 @@
             text-transform: uppercase;
             text-align: center;
         }
-        
+
         div {
             margin: auto;
+            width: inherit;
         }
 
         form {
@@ -174,46 +175,102 @@
             width: auto;
             padding: inherit;
         }
-        
+
         .fuck {
-            width: 375px;
+            width: 320px;
             text-align: center;
         }
-        
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+
+        [type="radio"]:checked+label,
+        [type="radio"]:not(:checked)+label {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+
+        [type="radio"]:checked+label:before,
+        [type="radio"]:not(:checked)+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+
+        [type="radio"]:checked+label:after,
+        [type="radio"]:not(:checked)+label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: coral;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        [type="radio"]:not(:checked)+label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        [type="radio"]:checked+label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
     </style>
 </head>
 
 <body>
-    <div class="fuck"><h1>Запис на пробний урок</h1></div>
-    
+    <div class="fuck">
+        <h1>Запис на пробний урок</h1>
+    </div>
+
     <form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" target="_top">
 
         <div class="row">
             <label>Ім'я</label>
-            <input type="text" name="name" placeholder="Adam Smith" title="example: Adam Smith" 
-                   pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})"></div>
+            <input type="text" name="name" placeholder="Adam Smith" title="example: Adam Smith" pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})">
+        </div>
 
         <div class="row">
             <label>Email</label>
-            <input type="text" name="email" placeholder="adamsmith@gmail.com" title="example: adamsmith@gmail.com" 
-                   pattern="[a-zA-Z1-9\-\._]+@[a-z1-9]+(.[a-z1-9]+){1,}"></div>
+            <input type="text" name="email" placeholder="adamsmith@gmail.com" title="example: adamsmith@gmail.com" pattern="[a-zA-Z1-9\-\._]+@[a-z1-9]+(.[a-z1-9]+){1,}">
+        </div>
 
         <div class="row">
             <label>Телефон</label>
-            <input type="text" name="tel" placeholder="+380637776655" pattern="\+380\d{3}\d{2}\d{2}\d{2}" 
-                   title="example: +380637776655"></div>
+            <input type="text" name="tel" placeholder="+380637776655" pattern="\+380\d{3}\d{2}\d{2}\d{2}" title="example: +380637776655">
+        </div>
 
-            <h1>на який месенджер</h1>
-            <div class="form-inline">
-                <input type="radio" id="viber" name="messenger" value="viber">
-                <label for="viber">Viber</label>
-                <input type="radio" id="telegram" name="messenger" value="telegram" checked>
-                <label for="telegram">Telegram</label>
-                <input type="radio" id="sms" name="messenger" value="sms">
-                <label for="sms">SMS</label>
-            </div>
+        <h1>на який месенджер</h1>
+        <div class="form-inline">
+            <input type="radio" id="viber" name="messenger" value="viber">
+            <label for="viber">Viber</label>
+            <input type="radio" id="telegram" name="messenger" value="telegram" checked>
+            <label for="telegram">Telegram</label>
+            <input type="radio" id="sms" name="messenger" value="sms">
+            <label for="sms">SMS</label>
+        </div>
 
-<div class="row">
+        <div class="row">
             <input style="background-color: coral" type="submit" value="Submit">
         </div>
     </form>
