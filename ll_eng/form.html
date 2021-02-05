@@ -118,14 +118,14 @@
         body {
             background-color: skyblue;
             font-family: 'Roboto Condensed', monospace;
+            font-size: 1em;
             overflow: visible;
         }
 
         h1 {
             font-weight: normal;
-            font-size: 2em;
+            font-size: 1.4em;
             line-height: 1.2;
-            text-transform: uppercase;
             text-align: center;
         }
 
@@ -139,7 +139,7 @@
             background: rgb(194, 248, 241);
             padding: 15px 40px 40px;
             border: 2px solid rgb(194, 248, 241);
-            margin: 50px auto 10px;
+            margin: 10px auto 10px;
             border-radius: 20px;
         }
 
@@ -149,8 +149,7 @@
         }
 
         input,
-        select,
-        textarea {
+        select {
             font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
             border: 1px solid rgb(194, 248, 241);
             padding: 10px;
@@ -158,6 +157,27 @@
             width: 100%;
             box-sizing: border-box;
             border-radius: 2px;
+        }
+
+        textarea {
+            background: whate;
+            border: 1px solid rgb(194, 248, 241);
+            padding: 1px;
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: coral;
+            /*            padding: 10px;*/
+            display: block;
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            text-align: center;
         }
 
         .row {
@@ -174,11 +194,6 @@
             display: inline-block;
             width: auto;
             padding: inherit;
-        }
-
-        .fuck {
-            width: 320px;
-            text-align: center;
         }
 
         [type="radio"]:checked,
@@ -239,15 +254,11 @@
 </head>
 
 <body>
-    <div class="fuck">
-        <h1>Запис на пробний урок</h1>
-    </div>
-
     <form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" target="_top">
 
         <div class="row">
             <label>Ім'я</label>
-            <input type="text" name="name" placeholder="Adam Smith" title="example: Adam Smith" pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})">
+            <input type="text" name="name" placeholder="Миколайчук Микола" title="example: Adam Smith" pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})">
         </div>
 
         <div class="row">
@@ -260,7 +271,7 @@
             <input type="text" name="tel" placeholder="+380637776655" pattern="\+380\d{3}\d{2}\d{2}\d{2}" title="example: +380637776655">
         </div>
 
-        <h1>на який месенджер</h1>
+        <h1>надіслати запрошення на безкоштовне заняття</h1>
         <div class="form-inline">
             <input type="radio" id="viber" name="messenger" value="viber">
             <label for="viber">Viber</label>
@@ -269,9 +280,14 @@
             <input type="radio" id="sms" name="messenger" value="sms">
             <label for="sms">SMS</label>
         </div>
-
-        <div class="row">
-            <input style="background-color: coral" type="submit" value="Submit">
+        <div>
+            <label for="textarea">Для запитаннь ⇩</label>
+            <textarea type="text" id="textarea" name="textarea" placeholder="Максимум 240 символів">
+            </textarea>
         </div>
+        <div class="button" type="submit" value="Submit">
+            <h1>відправити</h1>
+        </div>
+
     </form>
 </body></html>
