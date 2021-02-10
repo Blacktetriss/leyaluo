@@ -10,6 +10,7 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!-- Import other AMP Extensions here -->
     <link href="https://fonts.googleapis.com/css?family=Roboto Condensed" rel="stylesheet">
+    <!--    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>-->
     <style amp-custom>
         /* Add your styles here */
         body {
@@ -175,12 +176,12 @@
 
 <body>
     <div>
-        <h1>Будь ласка, заповніть форму</h1>
+        <h1 style="color: coral">Будь ласка, заповніть форму</h1>
     </div>
     <div class="container">
-        <form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" target="_top">
+        <form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
             <label>Ім'я</label>
-            <input type="text" name="name" placeholder="Мазурок Олеся" pattern="([A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$)|(^[А-Я]{1}[а-я]{1,14} [А-Я]{1}[а-я]{1,14})" required>
+            <input maxlength="30" type="text" name="name" placeholder="Катерина" required>
             <label>Телефон</label>
             <input type="tel" name="tel" placeholder="+380634201488" pattern="\+380\d{3}\d{2}\d{2}\d{2}" required>
             <label>Email</label>
