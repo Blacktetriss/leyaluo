@@ -68,7 +68,6 @@
                 visibility: visible
             }
         }
-
     </style><noscript>
         <style amp-boilerplate>
             body {
@@ -77,7 +76,6 @@
                 -ms-animation: none;
                 animation: none
             }
-
         </style>
     </noscript>
     <style amp-custom>
@@ -88,23 +86,53 @@
             overflow: visible;
         }
 
-        h1 {
-            font-size: x-large;
-            text-align: center;
+        .header {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .header h1 {
+            background-color: aqua;
+            border-radius: 5px;
+
+            color: white;
+            bottom: 10%;
+            margin-left: 10px;
+            position: absolute;
+            z-index: 1;
+            font-size: 1.5em;
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+
+        .title {
+            color: white;
+            font-size: 1.4em;
         }
 
         h2 {
             font-size: 1.3em;
-            color: darkslategrey;
+            color: yellow;
         }
 
         .amp-button {
             height: 80px;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             border-color: coral;
-            display: block;
             margin-top: 20px;
             background-color: coral;
             font-family: 'Roboto Condensed', monospace;
@@ -117,22 +145,54 @@
         }
 
         .block1 {
-            background-color: #c7ffec;
-            border-radius: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            background-color: rgb(88, 132, 159);
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+        }
+
+
+        ul {
+            background-color: burlywood;
+            align-content: center;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        li:before {
+            content: "◉ ";
         }
 
         amp-img {
             background-color: #566a6a;
         }
 
+        p {
+            display: block;
+            margin-top: -0.08em;
+            margin-bottom: 0em;
+            margin-left: 0;
+            margin-right: 0;
+        }
 
         /*==================TAB======*/
         :root {
-            --color-primary: coral;
+            --color-primary: #005AF0;;
+            --color-secondary: #00DCC0;
+            --color-text-light: #fff;
             --space-1: 0.5em;
+            --space-2: 1rem;   /* 16px */
             --space-4: 0.5em;
+            
+            --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
         }
 
         /* Styles for the flex layout based tabs */
@@ -203,57 +263,167 @@
         }
 
         /*==================TAB======*/
-
+/*        ================BUTTON==========*/
+        .scrollToTop {
+      color: var(--color-text-light);
+      font-size: 1.4em;
+      box-shadow: var(--box-shadow-1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      background: var(--color-primary);
+      z-index: 9999;
+      bottom: var(--space-2);
+      right: var(--space-2);
+      position: fixed;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .spacer {
+      width: 100vw;
+      max-width: 700px;
+      height: auto;
+      background-color: var(--color-secondary);
+    }
+    /* we move the anchor down to componsate the fixed header */
+    .target {
+      position: relative;
+    }
+    .target-anchor {
+      position: absolute;
+      top: -72px;
+      left: 0;
+    }
+/*        ================BUTTON==========*/
     </style>
     <script async src="https://cdn.ampproject.org/v0.js">
     </script>
     <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+
+
 </head>
 
 <body>
-
-
-    <!--<div class="txt1"><h1>АНГЛІЙСЬКА МОВА</h1></div>-->
-    <!--
-    <h2>набір на "ВЕСНЯНИЙ КУРС 2021" розпочато!</h2>
-    <h2>старуємо 1 березня</h2>
-    <button>запис на курси онлайн</button>
--->
+    <p class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+    </amp-position-observer>
+  </p>
+  <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "200ms",
+        "fill": "both",
+        "iterations": "1",
+        "direction": "alternate",
+        "animations": [{
+          "selector": "#scrollToTopButton",
+          "keyframes": [{
+            "opacity": "1",
+            "visibility": "visible"
+          }]
+        }]
+      }
+    </script>
+  </amp-animation>
+  <amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "200ms",
+        "fill": "both",
+        "iterations": "1",
+        "direction": "alternate",
+        "animations": [{
+          "selector": "#scrollToTopButton",
+          "keyframes": [{
+            "opacity": "0",
+            "visibility": "hidden"
+          }]
+        }]
+      }
+    </script>
+  </amp-animation>
+  <div class="spacer"></div> 
+    <div class="block1">
+        <amp-text>
+            <h2>НАВЧАЙСЯ ВСЬОГО ЗА 1200 грн
+                В МІСЯЦЬ</h2>
+        </amp-text>
+    </div>
+    <div class="block1">
+        <amp-text><p style="font-size: 0.9em">1 рівень = 4 місяці навчання.</p>
+            <p style="font-size: 0.9em">12 місяців навчання = 4 рівня.</p>
+        </amp-text>
+    </div>
+    <div class="block1">
+        <amp-text>
+            <h2>ВСЯ АНГЛІЙСЬКА<p style="font-size: 0.6em; text-align: left; font-weight: 100 ">від</p>
+                <p style="text-align: left">➀ ELEMENTARY</p>
+                <p style="font-size: 16px; text-align: left; font-weight: 100 ">до</p>
+                <p style="text-align: left">➃ UPPER-INTERMEDIATE!</p>
+            </h2>
+        </amp-text>
+    </div>
     <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
-        <div id="tab1" role="tab" aria-controls="tabpanel1" option selected style="background-color: greenyellow" >КУРС ВИХІДНОГО ДНЯ</div>
-        <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
-            <div style="background-color: greenyellow" >
-                <p style="text-indent: 20px">Оптимальний варіант для тих, у кого щільний графік в будні дні, кому складно сконцентруватися після напруженого робочого дня. Заняття на вихідних дозволять вам не тільки приходити додому по буднях вчасно, але і проводити вихідні з користю!</p>
-                <div class="block1">
-                    <p>● розмовна англійської за комунікативною методикою</p>
-                    <p>● одне заняття в тиждень - сб або нд 10:30 або 14:00</p>
-                    <p>● тривалість заняття - 180 хв</p>
-                    <p>● один рівень = 18 занять = 4,5 місяця</p>
-                    <p>● до 9-ти студентів в групі</p>
-                    <p>● підручники Pearson + додаткові матеріали</p>
-                </div>
-                <div>
-                    <h2>Вартість навчання 3500 грн/курс</h2>
-                </div>
-                <div class="block1">
-                    <p>● +800 грн навчальні матеріали</p>
-                    <p>● Додаткові клуби безкоштовно</p>
-                </div>
+        <div id="tab1" role="tab" aria-controls="tabpanel1" option selected style="background-color: greenyellow">КУРС ВИХІДНОГО ДНЯ</div>
+        <div style="background-color: lawngreen" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
+            <ul>
+                <li>розмовна англійської за комунікативною методикою</li>
+                <li>одне заняття в тиждень - сб або нд 10:30 або 14:00</li>
+                <li>тривалість заняття - 180 хв</li>
+                <li>один рівень = 18 занять = 4,5 місяця</li>
+                <li>до 9-ти студентів в групі</li>
+                <li>підручники Pearson + додаткові матеріали</li>
+            </ul>
+            <div class="block1">
+                <h2>Вартість навчання <p></p>3500 грн/курс</h2>
             </div>
+            <ul>
+                <li>+800 грн навчальні матеріали</li>
+                <li>додаткові клуби безкоштовно</li>
+            </ul>
             <p></p>
             <a href="form.html">
                 <button class="amp-button">
-                    <h1>запис онлайн</h1>
+                    <h2>запис онлайн</h2>
                 </button></a>
         </div>
         <div id="tab2" role="tab" aria-controls="tabpanel2" option>КУРС «ПІДГОТОВКА ДО ЗНО»</div>
         <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
         <div id="tab3" role="tab" aria-controls="tabpanel3" option>АНГЛІЙСЬКА ДЛЯ СТУДЕНТІВ</div>
         <div id="tabpanel4" role="tabpanel" aria-labelledby="tab4">Tab three content... </div>
-        <div id="tab4" role="tab" aria-controls="tabpanel4" option>FUCK THE POLIC</div>
-        <div id="tabpane4" role="tabpanel" aria-labelledby="tab4">1512 FUCK THE POLIC... </div>
-    </amp-selector>
-</body>
-
-</html>
+        <div id="tab4" role="tab" aria-controls="tabpanel4" option>
+            FUCK THE POLIC</div>
+        <div id="tabpane4" role="tabpanel" aria-labelledby="tab4"><h1>1512 FUCK THE POLIC...</h1>
+            <amp-img
+    src="/leyaluo/assets/14.webp"
+    srcset="/leyaluo/assets/14.jpg"
+    width="720"
+    height="1280"
+    layout="responsive"
+    alt="an image">
+</amp-img>
+        </div>
+    </amp-selector></div>
+    </div>
+<amp-video autoplay loop
+    width="720"
+    height="1280"
+    layout="responsive"
+    poster="/leyaluo/assets/screen1.jpg">
+    <source src="/leyaluo/assets/video1.webm"
+      type="video/webm" />
+    <source src="/leyaluo/assets/video1.mp4"
+      type="video/mp4" />
+    <div fallback>
+      <p>This browser does not support the video element.</p>
+    </div>
+  </amp-video>
+<button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">△</button>
+</body></html>

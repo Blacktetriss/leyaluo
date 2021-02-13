@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/favicon/android-icon-192x192-dunplab-1211.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700" rel="stylesheet">
 
-    <title>Кури англійської в Хмельницькому</title>
+    <title>Курси англійської в Хмельницькому</title>
 
     <style amp-boilerplate>
         body {
@@ -81,10 +81,27 @@
         </style>
     </noscript>
     <style amp-custom>
+        
+        body {
+            background-color: black;
+        }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js">
     </script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 </head>
 <body>
-
+    <amp-video autoplay loop
+    width="720"
+    height="1280"
+    layout="responsive"
+    poster="/leyaluo/assets/screen1.jpg">
+    <source src="/leyaluo/assets/video1.webm"
+      type="video/webm" />
+    <source src="/leyaluo/assets/video1.mp4"
+      type="video/mp4" />
+    <div fallback>
+      <p>This browser does not support the video element.</p>
+    </div>
+  </amp-video>
 </body></html>
