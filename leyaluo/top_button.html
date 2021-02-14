@@ -10,6 +10,7 @@
 
   <!--  Import amp-animation extension -->
   <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
 
   <link rel="canonical" href="https://amp.dev/documentation/examples/visual-effects/scroll_to_top/index.html">
   <meta name="viewport" content="width=device-width">
@@ -50,8 +51,8 @@
       visibility: hidden;
     }
     .spacer {
-      width: 100vw;
-      max-width: 700px;
+      width: 0px;
+      max-width: 0px;
       height: auto;
 /*      background-color: var(--color-secondary);*/
     }
@@ -64,6 +65,22 @@
       top: -72px;
       left: 0;
     }
+      
+      .hero {
+          height: 1280px;
+          width: 720px;
+          background-image: url(assets/14.webp);
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          text-align: center;
+          color: antiquewhite;
+          text-shadow: 1px 1px 2px black;
+          display: flex;
+          align-items: center;
+          font-size: 10vw;
+      }
   </style>
 </head>
 
@@ -107,12 +124,11 @@
       }
     </script>
   </amp-animation>
-  <div class="spacer">
-      <amp-img width="720" height="1280" layout="responsive" src="/leyaluo/assets/14.jpg"></amp-img>
-      <amp-img width="720" height="1280" layout="responsive" src="/leyaluo/assets/14.jpg"></amp-img>
-      <amp-img width="720" height="1280" layout="responsive" src="/leyaluo/assets/14.jpg"></amp-img>
-      <amp-img width="720" height="1280" layout="responsive" src="/leyaluo/assets/14.jpg"></amp-img>
-    </div>
+  <div class="spacer"></div>
+      <div class="hero">
+    <h1 amp-fx="parallax" data-parallax-factor="1.7">
+        FUCK!</h1></div>
+    
   <button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">△</button>
 </body>
 </html>

@@ -10,6 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700" rel="stylesheet">
 
     <title>Кури англійської в Хмельницькому</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Webpage",
+            "url": "https://www.leyaluo.com",
+            "name": "Курси англійської мови в Хмельницькому",
+            "headline": "Курси англійської мови в Хмельницькому",
+            "description": "Курси англійської мови в Хмельницькому",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.leyaluo.com"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "The Publisher",
+                "logo": {
+                    "url": "https://www.leyaluo.com/logo-blue.svg",
+                    "width": 175,
+                    "height": 60,
+                    "@type": "ImageObject"
+                }
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "/leyaluo/assets/14.jpg",
+                "width": 720,
+                "height": 1280
+            }
+        }
+
+    </script>
 
     <style amp-boilerplate>
         body {
@@ -85,34 +116,43 @@
             font-size: 24px;
             overflow: visible;
         }
-/*===========parallax====*/
-            .header {
-      position: relative;
-      overflow: hidden;
-    }
 
-    .header h1 {
-      color: white;
-      bottom: 10%;
-      left: 10px;
-      position: absolute;
-      z-index: 1;
-      font-size: 1.7em;
-    }
+        .hero {
+            height: 1280px;
+            width: 720px;
+            background-image: url(/leyaluo/assets/14.webp);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            color: antiquewhite;
+            text-shadow: 1px 1px 2px black;
+            display: flex;
+            align-items: center;
+            font-size: 10vw;
+        }
 
-    .title {
-      background-color: black;
-      color: white;
-    }
+        /*===========parallax====*/
+        .header {
+            position: relative;
+            overflow: hidden;
+        }
 
-    .parallax-image-window {
-      overflow: hidden;
-    }
+        .header h1 {
+            color: white;
+            bottom: 10%;
+            left: 10px;
+            position: absolute;
+            z-index: 1;
+            font-size: 1.7em;
+        }
 
-    .parallax-image-window amp-img {
-      margin-bottom: -20%;
-    }
-/*===========parallax====*/
+        .title {
+            color: white;
+        }
+
+        /*===========parallax====*/
 
         .flex-center {
             display: flex;
@@ -194,14 +234,16 @@
 
         /*==================TAB======*/
         :root {
-            --color-primary: #005AF0;;
+            --color-primary: #005AF0;
+            ;
             --color-secondary: #00DCC0;
             --color-text-light: #fff;
             --space-1: 0.5em;
-            --space-2: 1rem;   /* 16px */
+            --space-2: 1rem;
+            /* 16px */
             --space-4: 0.5em;
-            
-            --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+            --box-shadow-1: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 1px -1px rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
         }
 
         /* Styles for the flex layout based tabs */
@@ -272,40 +314,68 @@
         }
 
         /*==================TAB======*/
-/*        ================BUTTON==========*/
+        /*        ================BUTTON==========*/
+        
         .scrollToTop {
-      color: var(--color-text-light);
-      font-size: 1.4em;
-      box-shadow: var(--box-shadow-1);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: none;
-      outline: none;
-      background: var(--color-primary);
-      z-index: 9999;
-      bottom: var(--space-2);
-      right: var(--space-2);
-      position: fixed;
-      opacity: 0;
-      visibility: hidden;
-    }
-    .spacer {
-      width: 100vw;
-      max-width: 700px;
-      height: auto;
-      background-color: var(--color-secondary);
-    }
-    /* we move the anchor down to componsate the fixed header */
-    .target {
-      position: relative;
-    }
-    .target-anchor {
-      position: absolute;
-      top: -72px;
-      left: 0;
-    }
-/*        ================BUTTON==========*/
+            color: var(--color-text-light);
+            font-size: 1.4em;
+            box-shadow: var(--box-shadow-1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            background: var(--color-primary);
+            z-index: 9999;
+            bottom: var(--space-2);
+            right: var(--space-2);
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spacer {
+            width: 100vw;
+            max-width: 700px;
+            height: auto;
+            background-color: var(--color-secondary);
+        }
+
+        /* we move the anchor down to componsate the fixed header */
+        .target {
+            position: relative;
+        }
+
+        .target-anchor {
+            position: absolute;
+            top: -72px;
+            left: 0;
+        }
+
+        /*        ================BUTTON==========*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #flex-container {
+            background: rgb(0, 150, 208);
+            display: flex;
+            height: 100px;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #flex-container>div {
+            background: rgb(241, 101, 41);
+            border: 1px solid;
+            width: 100px;
+            height: 30%;
+            margin: 2px;
+            padding: 10px;
+        }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
@@ -318,67 +388,57 @@
 </head>
 
 <body>
+    <!--
+        <div class="hero">
+        <h1 amp-fx="parallax" data-factor="1.5">F U C K!</h1>
+    </div>
+-->
     <p class="target">
-    <a class="target-anchor" id="top"></a>
-    <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
-    </amp-position-observer>
-  </p>
-  <amp-animation id="showAnim" layout="nodisplay">
-    <script type="application/json">
-      {
-        "duration": "200ms",
-        "fill": "both",
-        "iterations": "1",
-        "direction": "alternate",
-        "animations": [{
-          "selector": "#scrollToTopButton",
-          "keyframes": [{
-            "opacity": "1",
-            "visibility": "visible"
-          }]
-        }]
-      }
-    </script>
-  </amp-animation>
-  <amp-animation id="hideAnim" layout="nodisplay">
-    <script type="application/json">
-      {
-        "duration": "200ms",
-        "fill": "both",
-        "iterations": "1",
-        "direction": "alternate",
-        "animations": [{
-          "selector": "#scrollToTopButton",
-          "keyframes": [{
-            "opacity": "0",
-            "visibility": "hidden"
-          }]
-        }]
-      }
-    </script>
-  </amp-animation>
-<!--
-    <div class="header">
-    <h1 amp-fx="parallax" data-parallax-factor="1.3">
-        <span class="title">Lorem Ipsum</span>
-    </h1>
-    <amp-img width="720" height="1280" layout="responsive" src="/leyaluo/assets/14.jpg"></amp-img>
--->  
-    <div class="spacer"></div>
+        <a class="target-anchor" id="top"></a>
+        <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+        </amp-position-observer>
+    </p>
+    <amp-animation id="showAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "1",
+                        "visibility": "visible"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+    <amp-animation id="hideAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "0",
+                        "visibility": "hidden"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+
     <div class="block1">
-        <h2>НАВЧАЙСЯ ВСЬОГО ЗА 1200 грн
-                В МІСЯЦЬ</h2>
-    </div>
-    <div class="block1">
-        <p style="font-size: 0.9em">1 рівень = 4 місяці навчання.</p>
-            <p style="font-size: 0.9em">12 місяців навчання = 4 рівня.</p>
-    </div>
-    <div class="block1">
-            <h2>ВСЯ АНГЛІЙСЬКА<p style="font-size: 0.6em; text-align: left; font-weight: 100 ">від</p>
-                <p style="text-align: left">➀ ELEMENTARY</p>
-                <p style="font-size: 16px; text-align: left; font-weight: 100 ">до</p>
-                <p style="text-align: left">➃ UPPER-INTERMEDIATE!</p>
-            </h2>
+        <h2>ВСЯ АНГЛІЙСЬКА<p style="font-size: 0.6em; text-align: left; font-weight: 100 ">від</p>
+            <p style="text-align: left">➀ ELEMENTARY</p>
+            <p style="font-size: 16px; text-align: left; font-weight: 100 ">до</p>
+            <p style="text-align: left">➃ UPPER-INTERMEDIATE!</p>
+        </h2>
     </div>
     <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
         <div id="tab1" role="tab" aria-controls="tabpanel1" option selected style="background-color: greenyellow">КУРС ВИХІДНОГО ДНЯ</div>
@@ -403,7 +463,6 @@
                 <button class="amp-button">
                     <h2>запис онлайн</h2>
                 </button></a>
-            <button id="scrollToTopButton" on="tap:top.scrollTo(duration=500)" class="scrollToTop">△</button>
         </div>
         <div id="tab2" role="tab" aria-controls="tabpanel2" option>КУРС «ПІДГОТОВКА ДО ЗНО»</div>
         <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
@@ -414,22 +473,11 @@
         <div id="tabpane4" role="tabpanel" aria-labelledby="tab4">
             <div>
                 <h1>1512 FUCK THE POLIC...</h1>
+            </div>
         </div>
-            <amp-video autoplay loop
-    width="720"
-    height="1280"
-    layout="responsive"
-    poster="/leyaluo/assets/screen1.jpg">
-    <source src="/leyaluo/assets/video1.webm"
-      type="video/webm" />
-    <source src="/leyaluo/assets/video1.mp4"
-      type="video/mp4" />
-    <div fallback>
-      <p>This browser does not support the video element.</p>
-    </div>
-  </amp-video></div>
     </amp-selector>
-<!--
+
+    <!--
 <amp-video autoplay loop
     width="720"
     height="1280"
@@ -444,5 +492,5 @@
     </div>
   </amp-video>
 -->
-<button id="scrollToTopButton" on="tap:top.scrollTo(duration=500)" class="scrollToTop">△</button>
+    <button id="scrollToTopButton" on="tap:top.scrollTo(duration=250)" class="scrollToTop">△</button>
 </body></html>
