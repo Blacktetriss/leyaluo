@@ -357,17 +357,14 @@
       }
     </script>
   </amp-animation>
-  <div class="spacer"></div>
 <!--
     <div class="header">
     <h1 amp-fx="parallax" data-parallax-factor="1.3">
         <span class="title">Lorem Ipsum</span>
     </h1>
     <amp-img width="720" height="1280" layout="responsive" src="/leyaluo/assets/14.jpg"></amp-img>
--->
-
-
-  <div class="spacer"></div>       
+-->  
+    <div class="spacer"></div>
     <div class="block1">
         <h2>НАВЧАЙСЯ ВСЬОГО ЗА 1200 грн
                 В МІСЯЦЬ</h2>
@@ -406,6 +403,7 @@
                 <button class="amp-button">
                     <h2>запис онлайн</h2>
                 </button></a>
+            <button id="scrollToTopButton" on="tap:top.scrollTo(duration=500)" class="scrollToTop">△</button>
         </div>
         <div id="tab2" role="tab" aria-controls="tabpanel2" option>КУРС «ПІДГОТОВКА ДО ЗНО»</div>
         <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
@@ -416,19 +414,22 @@
         <div id="tabpane4" role="tabpanel" aria-labelledby="tab4">
             <div>
                 <h1>1512 FUCK THE POLIC...</h1>
-                <amp-img
-    src="/leyaluo/assets/14.webp"
-    srcset="/leyaluo/assets/14.jpg"
+        </div>
+            <amp-video autoplay loop
     width="720"
     height="1280"
     layout="responsive"
-    alt="an image">
-</amp-img>
-            </div>
-            
-<!--            amp-fx="parallax" data-parallax-factor="1.5"-->
-        </div>
+    poster="/leyaluo/assets/screen1.jpg">
+    <source src="/leyaluo/assets/video1.webm"
+      type="video/webm" />
+    <source src="/leyaluo/assets/video1.mp4"
+      type="video/mp4" />
+    <div fallback>
+      <p>This browser does not support the video element.</p>
+    </div>
+  </amp-video></div>
     </amp-selector>
+<!--
 <amp-video autoplay loop
     width="720"
     height="1280"
@@ -442,5 +443,6 @@
       <p>This browser does not support the video element.</p>
     </div>
   </amp-video>
+-->
 <button id="scrollToTopButton" on="tap:top.scrollTo(duration=500)" class="scrollToTop">△</button>
 </body></html>
