@@ -99,6 +99,7 @@
                 visibility: visible
             }
         }
+
     </style><noscript>
         <style amp-boilerplate>
             body {
@@ -107,52 +108,16 @@
                 -ms-animation: none;
                 animation: none
             }
+
         </style>
     </noscript>
     <style amp-custom>
         body {
-            background-color: aquamarine;
+            background-color: #8bceff;
             font-family: 'Roboto Condensed', Verdana, Helvetica, Arial, monospace;
             font-size: 24px;
             overflow: visible;
         }
-
-        .hero {
-            height: 1280px;
-            width: 720px;
-            background-image: url(/leyaluo/assets/14.webp);
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: center;
-            color: antiquewhite;
-            text-shadow: 1px 1px 2px black;
-            display: flex;
-            align-items: center;
-            font-size: 10vw;
-        }
-
-        /*===========parallax====*/
-        .header {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header h1 {
-            color: white;
-            bottom: 10%;
-            left: 10px;
-            position: absolute;
-            z-index: 1;
-            font-size: 1.7em;
-        }
-
-        .title {
-            color: white;
-        }
-
-        /*===========parallax====*/
 
         .flex-center {
             display: flex;
@@ -161,7 +126,6 @@
             align-content: center;
         }
 
-
         .title {
             color: white;
             font-size: 1.4em;
@@ -169,7 +133,7 @@
 
         h2 {
             font-size: 1.3em;
-            color: yellow;
+            color: #000000;
         }
 
         .amp-button {
@@ -220,30 +184,51 @@
             content: "◉ ";
         }
 
+/*
         amp-img {
             background-color: #566a6a;
         }
+*/
 
         p {
             display: block;
-            margin-top: -0.08em;
-            margin-bottom: 0em;
+            margin-top: 0.1em;
+            margin-bottom: 0.1em;
             margin-left: 0;
             margin-right: 0;
         }
+
+        /*===========parallax====*/
+        .header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            color: white;
+            bottom: 10%;
+            left: 10px;
+            position: absolute;
+            z-index: 1;
+            font-size: 1.7em;
+        }
+
+        .title {
+            color: white;
+        }
+
+        /*===========parallax====*/
 
         /*==================TAB======*/
         :root {
             --color-primary: #005AF0;
             ;
-            --color-secondary: #00DCC0;
+            --color-secondary: #9cadf5;
             --color-text-light: #fff;
             --space-1: 0.5em;
             --space-2: 1rem;
             /* 16px */
             --space-4: 0.5em;
-
-            --box-shadow-1: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 1px -1px rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
         }
 
         /* Styles for the flex layout based tabs */
@@ -257,13 +242,13 @@
             /* custom styling, feel free to change */
             text-align: center;
             font-size: x-large;
-            padding: var(--space-1);
+            padding: 0.5em;
         }
 
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
             outline: none;
             /* custom styling, feel free to change */
-            border-bottom: 2px solid var(--color-primary);
+            border-bottom: 2px solid #005AF0;
         }
 
         amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
@@ -272,7 +257,7 @@
             order: 1;
             /* must be greater than the order of the tab buttons to flex to the next line */
             /* custom styling, feel free to change */
-            padding: var(--space-4);
+            padding: 0.5em;
             font-size: 24px;
         }
 
@@ -288,7 +273,7 @@
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
             outline: none;
             /* custom styling, feel free to change */
-            border-bottom: 2px solid var(--color-primary);
+            border-bottom: 2px solid #005AF0;
         }
 
         amp-selector[role=tablist].tabs-with-selector {
@@ -299,13 +284,13 @@
             /* custom styling, feel free to change */
             width: 100%;
             text-align: center;
-            padding: var(--space-1);
+            padding: 0.5em;
         }
 
         amp-selector.tabpanels [role=tabpanel] {
             display: none;
             /* custom styling, feel free to change */
-            padding: var(--space-4);
+            padding: 0.5em;
         }
 
         amp-selector.tabpanels [role=tabpanel][selected] {
@@ -314,31 +299,24 @@
         }
 
         /*==================TAB======*/
-        /*        ================BUTTON==========*/
-        
+        /*================BUTTON==========*/
+
         .scrollToTop {
-            color: var(--color-text-light);
+            color: #fff;
             font-size: 1.4em;
-            box-shadow: var(--box-shadow-1);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
             width: 50px;
             height: 50px;
             border-radius: 50%;
             border: none;
             outline: none;
-            background: var(--color-primary);
+            background: #005AF0;
             z-index: 9999;
-            bottom: var(--space-2);
-            right: var(--space-2);
+            bottom: 1rem;
+            right: 1rem;
             position: fixed;
             opacity: 0;
             visibility: hidden;
-        }
-
-        .spacer {
-            width: 100vw;
-            max-width: 700px;
-            height: auto;
-            background-color: var(--color-secondary);
         }
 
         /* we move the anchor down to componsate the fixed header */
@@ -352,52 +330,71 @@
             left: 0;
         }
 
-        /*        ================BUTTON==========*/
+        /*================BUTTON==========*/
 
-        * {
-            box-sizing: border-box;
-        }
-
-        #flex-container {
-            background: rgb(0, 150, 208);
+.box1 {
+            height: 200px;
+            width: 100%;
             display: flex;
-            height: 100px;
+            flex-direction: column;
             flex-wrap: nowrap;
-            align-content: center;
             justify-content: center;
-            align-items: center;
-        }
+            align-items: flex-start;
+            line-height: 0.8;
 
-        #flex-container>div {
-            background: rgb(241, 101, 41);
-            border: 1px solid;
-            width: 100px;
-            height: 30%;
-            margin: 2px;
-            padding: 10px;
+            margin: 10px 10px 10px 0px;
+
+            border: 4px dashed #00ceff;
+            background: rgb(242, 247, 125);
+            border-radius: 0px 0px 150px 0px;
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+            padding: 0em;
+            max-width: 420px;
         }
+        
+        h1.f1 {
+        display: inline;
+        line-height: 0.9;
+        }
+        
+
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
-    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
-
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 
 </head>
 
 <body>
-    <!--
-        <div class="hero">
-        <h1 amp-fx="parallax" data-factor="1.5">F U C K!</h1>
-    </div>
--->
     <p class="target">
         <a class="target-anchor" id="top"></a>
-        <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
-        </amp-position-observer>
-    </p>
+                <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+                </amp-position-observer>
+    <amp-img 
+  style="transform: rotate(180deg)"
+  alt="A view of the sea"
+  src="/leyaluo/assets/wave2.svg"
+  width="417"
+  height="115"
+  layout="responsive"
+></amp-img>
+    <div class="box1">курси</p>
+            <h1 class="f1">АНГЛІЙСЬКОЇ</h1>
+            </p>
+        <p>"ВЕСНЯНИЙ 2021"</p>
+        <p>старуємо з 1 березня</p>
+    </div>
+
+    <div class="box1" amp-fx="parallax" data-parallax-factor="1.2">
+        вся<h1 class="f1">АНГЛІЙСЬКА</h1>
+    </div>
+
     <amp-animation id="showAnim" layout="nodisplay">
         <script type="application/json">
             {
@@ -413,6 +410,7 @@
                     }]
                 }]
             }
+
         </script>
     </amp-animation>
     <amp-animation id="hideAnim" layout="nodisplay">
@@ -430,19 +428,19 @@
                     }]
                 }]
             }
+
         </script>
     </amp-animation>
 
-    <div class="block1">
-        <h2>ВСЯ АНГЛІЙСЬКА<p style="font-size: 0.6em; text-align: left; font-weight: 100 ">від</p>
-            <p style="text-align: left">➀ ELEMENTARY</p>
-            <p style="font-size: 16px; text-align: left; font-weight: 100 ">до</p>
-            <p style="text-align: left">➃ UPPER-INTERMEDIATE!</p>
+    <div class="box1">
+        ➀ від<h1 class="f1">ELEMENTARY</h1>
+        <p>➃ до</p><h1 class="f1">UPPER-INTERMEDIATE!</h1>
+        </p>
         </h2>
     </div>
     <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
         <div id="tab1" role="tab" aria-controls="tabpanel1" option selected style="background-color: greenyellow">КУРС ВИХІДНОГО ДНЯ</div>
-        <div style="background-color: lawngreen" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
+        <div style="background-color: greenyellow" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
             <ul>
                 <li>розмовна англійської за комунікативною методикою</li>
                 <li>одне заняття в тиждень - сб або нд 10:30 або 14:00</li>
@@ -473,9 +471,27 @@
         <div id="tabpane4" role="tabpanel" aria-labelledby="tab4">
             <div>
                 <h1>1512 FUCK THE POLIC...</h1>
+                <amp-img></amp-img>
             </div>
         </div>
     </amp-selector>
+    <amp-layout layout="responsive" width="1" height="1">
+        <div animate-in="fly-in-bottom" animate-in-delay="2s" animate-in-duration="5s">
+            <ul>
+                <li>розмовна англійської за комунікативною методикою</li>
+                <li>одне заняття в тиждень - сб або нд 10:30 або 14:00</li>
+                <li>тривалість заняття - 180 хв</li>
+                <li>один рівень = 18 занять = 4,5 місяця</li>
+                <li>до 9-ти студентів в групі</li>
+                <li>підручники Pearson + додаткові матеріали</li>
+            </ul>
+        </div>
+    </amp-layout>
+    <!--
+    <div animate-in="fly-in-bottom" animate-in-delay="0.5s" animate-in-duration="1s">
+                    <h1 style="color: wheat">ВІЛЬНІ<p></p>ПОДОРОЖІ</h1>
+                </div>
+-->
 
     <!--
 <amp-video autoplay loop
@@ -493,4 +509,6 @@
   </amp-video>
 -->
     <button id="scrollToTopButton" on="tap:top.scrollTo(duration=250)" class="scrollToTop">△</button>
-</body></html>
+</body>
+
+</html>
