@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "ampstart": "^1.0.0-init"
+    "@ampproject/toolbox-optimizer": "^2.7.6",
+    "amphtml-validator": "^1.0.34",
+    "ampstart": "^1.0.0-init",
+    "install": "^0.13.0",
+    "npm": "^7.5.4"
   }
 }
