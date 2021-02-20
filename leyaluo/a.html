@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="This is the AMP Boilerplate.">
+    <meta name="amp-script-src" content="'">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <link rel="preload" href="hero-img.jpg" as="image">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -510,6 +511,129 @@ template {
                 visibility: visible
             }
         }
+		
+/*		======scroll*/
+		
+		body {
+  background-color: #22262d;
+  text-align: center;
+  min-height: 100vh;
+}
+.flx {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.h400 {
+  height: 400px;
+}
+.h500 {
+  height: 500px;
+}
+.h600 {
+  height: 600px;
+}
+.h700 {
+  height: 700px;
+}
+.h800 {
+  height: 800px;
+}
+.demoScroll {
+  height: 300px;
+  overflow-y: auto;
+  width: 50px;
+}
+
+/* Scroll 1 */
+.sc1::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.sc1::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.sc1::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+
+/* Scroll 2 */
+.sc2::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.sc2::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.sc2::-webkit-scrollbar-thumb {
+  background-color: #11171a;
+  border-radius: 10px;
+}
+
+/* Scroll 3 */
+.sc3::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.sc3::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+.sc3::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Scroll 4 */
+.sc4::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.sc4::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.sc4::-webkit-scrollbar-thumb {
+  background-color: #e78632;
+  background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);
+  border-radius: 10px;
+}
+
+/* Scroll 5 */
+.sc5::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+.sc5::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sc5::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+	-webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}
+
+
+/* Scroll 6 */
+.sc6::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.sc6::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.sc6::-webkit-scrollbar-thumb {
+  background-color: #aab74d;
+  background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);
+  border-radius: 10px;
+}
+		
     </style><noscript>
         <style amp-boilerplate>
             body {
@@ -556,38 +680,57 @@ template {
 </head>
 
 <body>
-	<div>
-<nav class="links">
-  <a href="#element-1">1</a>
-  <a href="#element-2">2</a>
-  <a href="#element-3">3</a>
-  <a href="#element-4">4</a>
-  <a href="#element-5">5</a>
-</nav>
+<!--
+  <amp-script layout="container" src="https://bottle750.ml/js/a_test_script_amp.js"></amp-script>
+    <nav class="links">
+      <a href="#element-1">1</a>
+      <a href="#element-2">2</a>
+      <a href="#element-3">3</a>
+      <a href="#element-4">4</a>
+      <a href="#element-5">5</a>
+    </nav>
+    
+    <div class="hold">
+      <div id="element-1" class="element element-1"></div>
+      <div id="element-2" class="element element-2"></div>
+      <div id="element-3" class="element element-3"></div>
+      <div id="element-4" class="element element-4"></div>
+      <div id="element-5" class="element element-5"></div>
+    </div>
+-->
 
-<div class="hold">
-  <div id="element-1" class="element element-1"></div>
-  <div id="element-2" class="element element-2"></div>
-  <div id="element-3" class="element element-3"></div>
-  <div id="element-4" class="element element-4"></div>
-  <div id="element-5" class="element element-5"></div>
+<amp-script layout="container"
+  src="https://bottle750.ml/js/a_test_script_amp.js"
+  class="sample">
+  <button id="hello-url">Say hello!</button>
+</amp-script>
+
+
+	
+<!--=================================-->
+
+<!--
+	<div class='flx'>
+  <div class='demoScroll sc1'>
+    <div class='h500'></div>
+  </div>
+  <div class='demoScroll sc2'>
+    <div class='h800'></div>
+  </div>
+  <div class='demoScroll sc3'>
+    <div class='h600'></div>
+  </div>
+  <div class='demoScroll sc4'>
+    <div class='h400'></div>
+  </div>
+  <div class='demoScroll sc5'>
+    <div class='h500'></div>
+  </div>
+  <div class='demoScroll sc6'>
+    <div class='h600'></div>
+  </div>
+  <div class='demoScroll'></div>
 </div>
-		</div>
-
+-->
+	
 </body></html>
-
-<!-- var isScrollSnapSupported = 'scrollSnapType' in document.documentElement.style ||
-        'webkitScrollSnapType' in document.documentElement.style;
-
-if (!isScrollSnapSupported) {
-  var elem = document.createElement('p'),
-      txt  = document.createTextNode('Your browser does not support CSS Scroll Snap Points :( '),
-      local = document.body;
-  
-  elem.appendChild(txt);
-  elem.classList.add('warning');
-  local.insertBefore(elem, local.firstChild);
-} -->
-
-
-
