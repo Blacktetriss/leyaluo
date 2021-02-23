@@ -123,10 +123,11 @@
 		}
 
 		body {
-			margin: 0;
+			margin: 50%;
 			background: #96e8e7;
 			color: #3b3b3b;
 			min-width: 315px;
+			max-width: 500px;
 			overflow-x: hidden;
 			font-smooth: always;
 			-webkit-font-smoothing: antialiased
@@ -1812,7 +1813,7 @@
 
 		.ampstart-readmore:after {
 			display: block;
-			content: "⌄";
+			content: "▿";
 			font-size: 2rem
 		}
 
@@ -2430,7 +2431,7 @@
 
 		.bg-dott {
 			background-color: #E5E5F7;
-			opacity: 0.4;
+			opacity: 0.9;
 			background-image: radial-gradient(#007eff 0.8px, #E5E5F7 0.8px);
 			background-size: 16px 16px;
 		}
@@ -2744,11 +2745,11 @@
 			background: #96e8e7;
 			box-shadow: 25px 25px 50px #80c5c4,
 				-25px -25px 50px #adffff;
-			
+
 			text-shadow: 2px 2px 3px rgba(100, 54, 0, 0.38);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
 		}
 
 		.box {
@@ -2763,13 +2764,73 @@
 				inset -25px -25px 50px #adffff;
 		}
 		
+		.morf2 {
+			border-radius: 20px;
+			background: #96e8e7;
+			box-shadow:  20px 20px 60px #80c5c4,
+             -20px -20px 60px #adffff;
+		}
+
 		.txt {
-  text-shadow: 2px 2px 4px rgba(0, 0, 100, 0.22);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
+			text-shadow: 2px 2px 4px rgba(0, 0, 100, 0.22);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
 		}
 		
+/*		============*/
+		
+		.font-morfh {
+          font-size: 4rem;
+          text-transform: uppercase;
+          letter-spacing: 1rem;
+          font-weight: 700;
+          color: #96e8e7;
+          text-shadow: 0.45rem 0.45rem 1rem #80c5c4,
+               -0.45rem -0.45rem 1rem #adffff;
+     }
+		
+/*======1b-ticker.css*/
+		
+/* OUTER CONTAINER */
+.tcontainer {
+  width: 100%;
+  overflow: hidden; /* Hide scroll bar */
+}
+ 
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+  width: 100%;
+  padding-left: 100%; /* Push contents to right side of screen */
+  background-color: #96e8e7;
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 20s;
+}
+.ticker-move:hover{
+  animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+  display: inline-block; /* Lay items in a horizontal line */
+  padding: 0 2rem;
+}
+		
+
 
 	</style>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -2834,7 +2895,7 @@
 	<!--==================== IMG FULL-->
 
 	<figure class="ampstart-image-fullpage-hero m0 relative mb4">
-		<amp-img width="720" height="1280" layout="responsive" src="https://leyaluo.com/assets/14.jpg" media="(max-width: 540px)" alt="Beautiful Image of a rectangle"></amp-img>
+		<amp-img width="720" height="1280" layout="responsive" src="https://leyaluo.com/assets/14.jpg" media="(max-width: 768px)" alt="Beautiful Image of a rectangle"></amp-img>
 		<figcaption class="absolute top-0 right-0 bottom-0 left-0">
 			<header class="p2 m4 glass-z">
 				<div class="ampstart-fullpage-hero-heading p2">
@@ -2847,7 +2908,7 @@
 
 
 
-<!--
+					<!--
 					<br><span class="ampstart-image-credit h4">
 						By <a href="#" role="author" class="text-decoration-none">D.F. Roy</a>,<br> January 14, 2017
 					</span>
@@ -2856,13 +2917,131 @@
 
 
 			</header>
-<!--
+			
 			<footer class="absolute left-0 right-0 bottom-0">
-				<a class="ampstart-readmore py3 caps line-height-2 text-decoration-none center block h5" href="#content">Read more</a>
+				<a class="ampstart-readmore py3 caps line-height-2 text-decoration-none center block h5" href="#content">далі</a>
 			</footer>
--->
+
 		</figcaption>
 	</figure>
+
+<!--===========ticker-->
+	
+	<div class="tcontainer p2"><div class="ticker-wrap"><div class="ticker-move">
+  <div class="ticker-item"><h3 class="font-morfh">1488 \o Kapitulieren? Nein! \o 1488.</h3></div>
+</div></div></div>
+	
+<!--===========ticker-->
+	
+	<div class="morf p2 m4">
+		<div amp-fx="fade-in"
+  data-margin-start="30%" data-duration="300ms">
+			<div class="txt mt2 ">
+				<div class="float left mr2">
+					<amp-img src="/leyaluo/assets/baseline_laptop_mac_black_48dp.png" width="80" height="80" >
+					</amp-img>
+				</div>
+				<b>СУЧАСНА МЕТОДИКА</b>
+				<br>Максимальний розвиток практичних навичок застосування мови в будь-якій формі спілкування. Рівень за 4 місяці: 3 заняття на тиждень по 1,5 год.
+			</div></div>
+		
+			<div amp-fx="fade-in"
+  data-margin-start="30%" data-duration="300ms">
+			<div class="txt mt2">
+				<div class="float left mr2">
+					<amp-img src="/leyaluo/assets/baseline_receipt_black_48dp.png" width="80" height="80">
+					</amp-img>
+				</div>
+				<b>ПИСЬМОВА ГАРАНТІ</b>
+				<br>Якщо Ви пройшли всі заняття і склали тестові завдання менше ніж на 65%, Вам буде повторно надано безкоштовний доступ до курсу в тому ж обсязі.
+			</div>
+			</div>
+	
+	<div amp-fx="fade-in"
+  data-margin-start="30%" data-duration="300ms">
+			<div class="txt mt2">
+				<div class="float left mr2">
+					<amp-img src="/leyaluo/assets/baseline_schedule_black_48dp.png" width="80" height="80">
+					</amp-img>
+				</div>
+				<b>ГНУЧКИЙ ГРАФІК</b>
+				<br>Якщо довелося несподівано з яких-небудь причин призупинити заняття, Ви зможете зробити паузу, щоб потім продовжити програму. Вам не доведеться платити двічі.
+			</div>
+			</div>
+	
+	<div amp-fx="fade-in"
+  data-margin-start="30%" data-duration="300ms">
+			<div class="txt mt2">
+				<div class="float left mr2">
+					<amp-img src="/leyaluo/assets/baseline_record_voice_over_black_48dp.png" width="80" height="80">
+					</amp-img>
+				</div>
+				<b>ЕФЕКТИВНО</b>
+				<br>Ви зможете побачити зростання Вашого рівня англійської мови вже після проходження перших занять.
+			</div>
+			</div>
+	</div>
+
+<!--ВІД ELEMENTARY ДО UPPER-INTERMEDIATE!	-->
+	
+<!--	<h3 class="column txt center font-morfh">ВСЯ</h3>-->
+		
+		
+	<div class="p4" amp-fx="fade-in"
+  data-margin-start="30%" data-duration="300ms">
+			<div class="morf2 p2 txt border" style="min-height: 250px">
+				<div class="float left mr2 relative top-0 left-0">
+					<amp-img src="/leyaluo/assets/baseline_record_voice_over_black_48dp.png" width="30" height="30">
+					</amp-img>
+					<h3 class="font-morfh">fuc</h3>Ви зможете побачити зростання Вашого рівня англійської мови вже після проходження перших занять.
+				</div>
+				
+			</div>
+		
+		<div class="clearfix border morf2">
+  <div class="left p2 mr1">
+			<amp-img src="/leyaluo/assets/baseline_record_voice_over_black_48dp.png" width="30" height="30">
+					</amp-img>
+			</div>
+  <div>
+    <p><h4>UPPER-INTERMEDIATE!</h4></p>
+  </div>
+</div>
+		
+<!--
+<div class="float left mr2 relative top-0 left-0">
+	Дj <h3>UPPER-I</h3>
+<amp-img src="/leyaluo/assets/baseline_record_voice_over_black_48dp.png" width="30" height="30">
+</amp-img>
+</div>
+-->
+
+		
+		
+		<h3 amp-fx="fade-in"
+  data-margin-start="70%" data-duration="200ms">sdfsdfsdfsdf</h3>
+			</div>
+	
+	
+<!--
+1 рівень = 4 місяці навчання.
+12 місяців навчання = 4 рівня.
+
+ВСЯ АНГЛІЙСЬКА
+ВІД ELEMENTARY ДО UPPER-INTERMEDIATE!
+-->
+		
+<!--
+<amp-img src="/leyaluo/assets/job.webp"
+  width="420"
+  height="420"
+  layout="responsive"
+  alt="AMP">
+  <noscript>
+    <img src="/leyaluo/assets/job.webp" width="420" height="1280" alt="AMP">
+  </noscript>
+</amp-img>
+-->
 
 	<!--	=================================-->
 
@@ -2873,7 +3052,8 @@
 			</div>
 			<div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
 				<div class="p2 txt">
-					Базовий курс англійської мови побудований на комунікативній методиці. Робиться максимальний акцент на
+					Базовий курс англійської мови побудований на комунікативній методиці. Робиться максимальний акцент
+					на
 					живу розмовну мову, яка використовується в повсякденному житті, тренуються навики говоріння та
 					аудіювання (70%), читання та письма (30%).
 					<ul>
@@ -2893,22 +3073,22 @@
 							<h2>1700</h2>
 						</span> грн/міс</h3>
 				</div>
-					<br>
-					<div class="txt p2">
-						<ul>
-							<li>+ 800 грн навчальні матеріали</li>
-							<li>-15% при сплаті повного курсу</li>
+				<br>
+				<div class="txt p2">
+					<ul>
+						<li>+ 800 грн навчальні матеріали</li>
+						<li>-15% при сплаті повного курсу</li>
 
-						</ul>
-					</div>
-					<br>
-					<div class="flex-column btn-cta">
-						<a class="text-decoration-none" href="form.html">
-							<h3 class="text-decoration-none center p3">запис онлайн</h3>
-						</a>
-					</div>
+					</ul>
 				</div>
-			
+				<br>
+				<div class="flex-column btn-cta">
+					<a class="text-decoration-none" href="form.html">
+						<h3 class="text-decoration-none center p3">запис онлайн</h3>
+					</a>
+				</div>
+			</div>
+
 
 			<div id="tab2" role="tab" aria-controls="tabpanel2" option>
 				<h3>«ПІДГОТОВКА ДО ЗНО»</h3>
@@ -3001,7 +3181,9 @@
 				</div>
 				<b>Саша Корнілова</b>
 				<br>ФОП Корнилова
-				<br>Прошла курс elementary и на следующий планирую записаться в эту же школу. Обучение и подход мне нравится. Ольге отдельное спасибо за качественное преподавание, за вовлечённость и за то что постоянно на связи.
+				<br>Прошла курс elementary и на следующий планирую записаться в эту же школу. Обучение и подход мне
+				нравится. Ольге отдельное спасибо за качественное преподавание, за вовлечённость и за то что постоянно
+				на связи.
 			</div>
 		</div>
 
@@ -3046,15 +3228,15 @@
 			</div>
 		</div>
 		<hr>
-		
-				<!--	==========FORM======-->
+
+		<!--	==========FORM======-->
 
 		<div>
 			<h3 class="text-decoration-none ampstart-label center">Будь ласка, заповніть форму</h3>
 		</div>
 
-		<div class="morf m3 p4">
-			<form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
+		<div class="morf m4 p4">
+			<form class="form center" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
 
 				<div class="ampstart-input inline-block relative">
 					<input class="block border-none p0 m0" type="text" maxlength="30" name="name" id="ip1" placeholder="Ім'я" required>
@@ -3089,8 +3271,8 @@
 						<h3>запис онлайн</h3>
 					</button>
 				</div>
-		</form>
-	</div>
+			</form>
+		</div>
 		<hr>
 
 		<!--====================footer-->
@@ -3148,9 +3330,9 @@
 
 
 
-	<!--	==========-->
+		<!--	==========-->
 
-	<button id="scrollToTopButton" on="tap:top.scrollTo(duration=250)" class="scrollToTop">△</button>
+		<button id="scrollToTopButton" on="tap:top.scrollTo(duration=250)" class="scrollToTop">△</button>
 	</div>
 </body>
 
