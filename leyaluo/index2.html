@@ -1512,7 +1512,7 @@
 		}
 
 		.ampstart-accent {
-			color: #003f93
+			color: #8d4600
 		}
 
 		#content:target {
@@ -1852,13 +1852,13 @@
 			max-width: 100%;
 			width: 420px;
 			min-width: 100px;
-			font-size: 1.5rem;
+			font-size: 1.1rem;
 			line-height: 1.5rem
 		}
 
 		.ampstart-input [disabled],
 		.ampstart-input [disabled]+label {
-			opacity: .5
+			opacity: .6
 		}
 
 		.ampstart-input [disabled]:focus {
@@ -1873,7 +1873,7 @@
 			line-height: 1.5rem;
 			border: 0;
 			border-radius: 0;
-			border-bottom: 1px solid #4a4a4a;
+			border-bottom: 1px solid #656565;
 			background: none;
 			color: #4a4a4a;
 			outline: 0
@@ -2737,13 +2737,18 @@
 
 		.btn-cta {
 			height: 80px;
-			color: hsl(0, 100%, 39%);
+			color: hsl(7, 91%, 42%);
 			font-variant: small-caps;
 			cursor: pointer;
 			border-radius: 20px;
 			background: #96e8e7;
 			box-shadow: 25px 25px 50px #80c5c4,
 				-25px -25px 50px #adffff;
+			
+			text-shadow: 2px 2px 3px rgba(100, 54, 0, 0.38);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
 		}
 
 		.box {
@@ -2757,11 +2762,20 @@
 			box-shadow: inset 25px 25px 50px #80c5c4,
 				inset -25px -25px 50px #adffff;
 		}
+		
+		.txt {
+  text-shadow: 2px 2px 4px rgba(0, 0, 100, 0.22);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+		}
+		
 
 	</style>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
 	<script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 	<script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
 	<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
 	<script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
@@ -2820,34 +2834,33 @@
 	<!--==================== IMG FULL-->
 
 	<figure class="ampstart-image-fullpage-hero m0 relative mb4">
-		<amp-img width="404" height="720" layout="responsive" src="https://leyaluo.com/assets/14.jpg" media="(max-width: 768px)" alt="Beautiful Image of a rectangle"></amp-img>
+		<amp-img width="720" height="1280" layout="responsive" src="https://leyaluo.com/assets/14.jpg" media="(max-width: 540px)" alt="Beautiful Image of a rectangle"></amp-img>
 		<figcaption class="absolute top-0 right-0 bottom-0 left-0">
-			<header class="p1 glass m">
-				<div class="ampstart-fullpage-hero-heading mb4">
+			<header class="p2 m4 glass-z">
+				<div class="ampstart-fullpage-hero-heading p2">
 
 					<h2 class="ampstart-fullpage-hero-heading-text">
 						АНГЛІЙСЬКА</h2>
 					<h2>курс</h2>
 					<h2>"ВЕСНА 2021"</h2>
 					<br>старуємо з 1 березня
-					<!--
-					<span class="ampstart-image-credit h4">
+
+
+
+<!--
+					<br><span class="ampstart-image-credit h4">
 						By <a href="#" role="author" class="text-decoration-none">D.F. Roy</a>,<br> January 14, 2017
 					</span>
 -->
 				</div>
 
 
-				<!--=================================-->
-
-
-
-				<!--=================================-->
-
 			</header>
+<!--
 			<footer class="absolute left-0 right-0 bottom-0">
 				<a class="ampstart-readmore py3 caps line-height-2 text-decoration-none center block h5" href="#content">Read more</a>
 			</footer>
+-->
 		</figcaption>
 	</figure>
 
@@ -2856,10 +2869,10 @@
 	<div>
 		<amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
 			<div id="tab1" role="tab" aria-controls="tabpanel1" option selected>
-				<h3>«ВЕСНА 2021»</h3>
+				<h3>КУРС «ВЕСНА 2021»</h3>
 			</div>
 			<div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
-				<div class="p2 box">
+				<div class="p2 txt">
 					Базовий курс англійської мови побудований на комунікативній методиці. Робиться максимальний акцент на
 					живу розмовну мову, яка використовується в повсякденному житті, тренуються навики говоріння та
 					аудіювання (70%), читання та письма (30%).
@@ -2875,14 +2888,13 @@
 					</ul>
 				</div>
 				<br>
-				<div class="col-12 p2 box morf">
-					<h3 class="center ">Вартість навчання <span>
+				<div class="col-12 p2 txt morf">
+					<h3 class="center">Вартість навчання <span>
 							<h2>1700</h2>
 						</span> грн/міс</h3>
 				</div>
-				<div>
 					<br>
-					<div class=" p2 box">
+					<div class="txt p2">
 						<ul>
 							<li>+ 800 грн навчальні матеріали</li>
 							<li>-15% при сплаті повного курсу</li>
@@ -2895,11 +2907,8 @@
 							<h3 class="text-decoration-none center p3">запис онлайн</h3>
 						</a>
 					</div>
-
-
-
 				</div>
-			</div>
+			
 
 			<div id="tab2" role="tab" aria-controls="tabpanel2" option>
 				<h3>«ПІДГОТОВКА ДО ЗНО»</h3>
@@ -2927,7 +2936,7 @@
 				<p></p>
 				<a href="form.html">
 					<button class="amp-button">
-						<h2 class="">запис онлайн</h2>
+						<h2>запис онлайн</h2>
 					</button></a>
 			</div>
 
@@ -2985,7 +2994,7 @@
 			</div>
 		</amp-selector>
 		<div class="p4">
-			<div class="box p2">
+			<div class="box p2 txt">
 				<div class="float left mr2">
 					<amp-img src="https://leyaluo.com/assets/zzz_2.webp" width="80" height="80" class="circle">
 					</amp-img>
@@ -2997,7 +3006,7 @@
 		</div>
 
 		<div class="p4">
-			<div class="box p2">
+			<div class="box p2 txt">
 				<div class="float left mr2">
 					<amp-img src="https://leyaluo.com/assets/face.jpg" width="80" height="80" class="circle">
 					</amp-img>
@@ -3011,7 +3020,7 @@
 		</div>
 
 		<div class="p4">
-			<div class="box p2">
+			<div class="box p2 txt">
 				<div class="float left mr2">
 					<amp-img src="https://leyaluo.com/assets/zzz_1.webp" width="80" height="80" class="circle">
 					</amp-img>
@@ -3024,7 +3033,7 @@
 			</div>
 		</div>
 		<div class="p4">
-			<div class="box p2">
+			<div class="box p2 txt">
 				<div class="float left mr2">
 					<amp-img src="https://leyaluo.com/assets/zzz_3.webp" width="80" height="80" class="circle">
 					</amp-img>
@@ -3036,6 +3045,53 @@
 				курс "Elementary" я помітно підняв свій рівень.
 			</div>
 		</div>
+		<hr>
+		
+				<!--	==========FORM======-->
+
+		<div>
+			<h3 class="text-decoration-none ampstart-label center">Будь ласка, заповніть форму</h3>
+		</div>
+
+		<div class="morf m3 p4">
+			<form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
+
+				<div class="ampstart-input inline-block relative">
+					<input class="block border-none p0 m0" type="text" maxlength="30" name="name" id="ip1" placeholder="Ім'я" required>
+					<label for="ip1" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
+						Катерина, наприклад
+					</label>
+				</div>
+				<hr>
+				<div class="ampstart-input inline-block relative">
+					<input class="block border-none p0 m0" type="tel" name="tel" id="ip2" placeholder="Телефон" pattern="\+380\d{3}\d{2}\d{2}\d{2}" required>
+					<label for="ip2" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
+						+380634201312
+					</label>
+				</div>
+				<hr>
+				<div class="ampstart-input inline-block relative">
+					<input class="block border-none p0 m0" type="email" name="email" placeholder="Email" pattern="[a-zA-Z1-9\-\._]+@[a-z1-9]+(.[a-z1-9]+){1,}" id="ip3" required>
+					<label for="ip3" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
+						leyaluolie@gmail.com
+					</label>
+				</div>
+				<hr>
+				<div class="ampstart-input inline-block relative m0 p0 mb3 ">
+					<textarea name="textarea" id="ip13" class="block border-none  p0 m0" maxlength="240" rows="8" placeholder="Для запитань"></textarea>
+					<label for="ip13" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
+						Максимум 240 символів...
+					</label>
+				</div>
+				<hr>
+				<div class="flex justify-center  btn-cta">
+					<button class="border-none pl4 pr4 " name="btn" type="submit">
+						<h3>запис онлайн</h3>
+					</button>
+				</div>
+		</form>
+	</div>
+		<hr>
 
 		<!--====================footer-->
 
@@ -3090,50 +3146,7 @@
 			<small>© 'ENG' English Courses, 2021</small>
 		</footer>
 
-		<!--	==========FORM======-->
 
-		<div>
-			<h3 class="text-decoration-none ampstart-label center">Будь ласка, заповніть форму</h3>
-		</div>
-
-		<div class="morf m3 p4">
-			<form class="form" method="POST" action="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
-
-				<div class="ampstart-input inline-block relative">
-					<input class="block border-none p0 m0" type="text" maxlength="30" name="name" id="ip1" placeholder="Ім'я" required>
-					<label for="ip1" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
-						Катерина, наприклад
-					</label>
-				</div>
-				<hr>
-				<div class="ampstart-input inline-block relative">
-					<input class="block border-none p0 m0" type="tel" name="tel" id="ip2" placeholder="Телефон" pattern="\+380\d{3}\d{2}\d{2}\d{2}" required>
-					<label for="ip2" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
-						+380634201312
-					</label>
-				</div>
-<hr>
-				<div class="ampstart-input inline-block relative">
-					<input class="block border-none p0 m0" type="email" name="email" placeholder="Email" pattern="[a-zA-Z1-9\-\._]+@[a-z1-9]+(.[a-z1-9]+){1,}" id="ip3" required>
-					<label for="ip3" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
-						leyaluolie@gmail.com
-					</label>
-				</div>
-<hr>
-				<div class="ampstart-input inline-block relative m0 p0 mb3 ">
-					<textarea name="textarea" id="ip13" class="block border-none  p0 m0" maxlength="240" rows="8" placeholder="Для запитань"></textarea>
-					<label for="ip13" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">
-						Максимум 240 символів...
-					</label>
-				</div>
-<hr>
-				<div class="flex justify-center  btn-cta">
-					<button class="border-none pl4 pr4 " name="btn" type="submit">
-						<h3>запис онлайн</h3>
-					</button>
-				</div>
-		</form>
-	</div>
 
 	<!--	==========-->
 
