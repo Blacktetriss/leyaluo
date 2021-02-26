@@ -16,7 +16,8 @@
 	<!-- Load AMP -->
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<!-- Import other AMP Extensions here -->
-	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+
 	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 
 	<style amp-custom>
@@ -284,33 +285,36 @@
 			}
 		}
 	</script>
+<!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
 </head>
 
 <body>
-	<!-- Configure analytics to use gtag -->
-    <amp-analytics type="gtag" data-credentials="include">
+<!-- Google Tag Manager -->
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-58NJDGR&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 
-		<script type="application/json">
-		  {
-			"vars": {
-			  "gtag_id": "G-WB87RXZDLZ",
-			  "config": {
-				"G-WB87RXZDLZ": { "groups": "default" }
-			  }
-			},
-			"triggers": {
-			  "button": {
-				"selector": "#btn-sign",
-				"on": "click",
-				"vars": {
-				  "event_name": "Sign in",
-				  "method": "Google"
-				}
-			  }
-			}
-		  }
-		</script>
-	  </amp-analytics>
+<amp-analytics type="gtag" data-credentials="include">
+	<script type="application/json">
+	{
+	  "vars" : {
+		"gtag_id": "G-020WXSVW8G",
+		"config" : {
+		  "G-020WXSVW8G": { "groups": "default" }
+		}
+	  },
+	  "triggers": {
+        "button": {
+          "selector": "#btn-sign",
+          "on": "click",
+          "vars": {
+            "event_name": "sign in",
+            "method": "Google"
+          }
+        }
+      }
+	}
+	</script>
+	</amp-analytics>
 
 
         <button type="submit" id="btn-sign" style="width: 6em; height: 6em; margin-top: 25%;">Sign in</button>
