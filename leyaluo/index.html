@@ -291,20 +291,29 @@
 
 <body>
 <!-- Google Tag Manager -->
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-58NJDGR&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-58NJDGR&gtm.url=SOURCE_URL" data-credentials="include">
+	{
+		"vars" : {
+			"button": "btn-sign",
+			"on": "click"
+		}
+	}
+</amp-analytics>
 
-<amp-analytics type="gtag" data-credentials="include">
+<!-- <amp-analytics type="gtag" data-credentials="include">
 	<script type="application/json">
 	{
 	  "vars" : {
 		"gtag_id": "UA-160681047-1",
 		"config" : {
-		  "UA-160681047-1": { "groups": "default" }
+		  "UA-160681047-1": { "groups": "default",
+		  "site_speed_sample_rate": 100
+		 }
 		}
 	  },
 	  "triggers": {
         "button": {
-          "selector": "#btn-sign",
+          "selector": "btn-sign",
           "on": "click",
           "vars": {
             "event_name": "sign in",
@@ -314,10 +323,10 @@
       }
 	}
 	</script>
-	</amp-analytics>
+	</amp-analytics> -->
 
 
-        <button type="submit" id="btn-sign" style="width: 6em; height: 6em; margin-top: 25%;">Sign in</button>
+        <button type="submit" id="btn-sign" style="width: 6em; height: 6em; margin-top: 25%;">FCUK!</button>
 
 
 	<!--=============================-->
