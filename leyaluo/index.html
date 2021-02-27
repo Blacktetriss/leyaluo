@@ -290,15 +290,6 @@
 </head>
 
 <body>
-<!-- Google Tag Manager -->
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-58NJDGR&gtm.url=SOURCE_URL" data-credentials="include">
-	{
-		"vars" : {
-			"button": "btn-sign",
-			"on": "click"
-		}
-	}
-</amp-analytics>
 
 <amp-analytics type="gtag" data-credentials="include">
 	<script type="application/json">
@@ -310,13 +301,8 @@
 		  "site_speed_sample_rate": 100
 		 }
 		}
-	  }
-	  
-	}
-	</script>
-	</amp-analytics>
-
-	<!-- "triggers": {
+	  },
+	  "triggers": {
         "button": {
           "selector": "btn-sign",
           "on": "click",
@@ -325,7 +311,11 @@
             "method": "Google"
           }
         }
-      } -->
+      }
+	}
+	</script>
+	</amp-analytics>
+
 
         <button type="submit" id="btn-sign" style="width: 6em; height: 6em; margin-top: 25%;">FCUK!</button>
 
