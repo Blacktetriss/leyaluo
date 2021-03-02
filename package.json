@@ -2,17 +2,17 @@
   "dependencies": {
     "@ampproject/toolbox-optimizer": "^2.7.6",
     "@ampproject/toolbox-script-csp": "^2.5.4",
-    "ace-css": "^1.1.0",
     "amphtml-validator": "^1.0.34",
     "ampstart": "^1.0.0-init",
-    "basscss": "^8.0.2",
-    "i": "^0.3.6",
     "jimp": "^0.16.1",
     "lru-cache": "^6.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "ace-css": "^1.1.0",
+    "basscss": "^8.0.2",
     "colors.css": "^3.0.0",
+    "i": "^0.3.6",
     "install": "^0.13.0",
     "npm": "^7.6.0"
   }
