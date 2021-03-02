@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "ace-css": "^1.1.0",
-    "basscss": "^8.0.2",
+    "basscss": "^8.1.0",
     "colors.css": "^3.0.0",
     "i": "^0.3.6",
     "install": "^0.13.0",
