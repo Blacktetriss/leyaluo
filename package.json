@@ -3,6 +3,7 @@
     "ace-css": "^1.1.0",
     "autoprefixer": "^10.2.4",
     "immutable-css": "^1.1.2",
+    "normalize.css": "^8.0.1",
     "postcss-cli": "^8.3.1"
   }
 }
